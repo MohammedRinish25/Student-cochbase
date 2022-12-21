@@ -1,0 +1,13 @@
+eureka:
+  client:
+    service-url:
+      default-zone: http://EUREKA-SERVER
+      
+spring:   
+  cloud:
+    gateway:
+      routes:
+      - id: watermarkService
+        uri:  lb://WATERMARK-SERVICE
+        predicates:
+        - Path=/** 
