@@ -1,6 +1,4 @@
-spring:
-  config:
-    import: configserver:http://${host}:${port}
-    
-  application:
-    name: WATERMARK-SERVICE
+eureka:
+  client:
+    service-url:
+      default-zone: http://EUREKA-SERVER
