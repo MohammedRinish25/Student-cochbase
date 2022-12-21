@@ -5,11 +5,11 @@ eureka:
 
 
 
-# spring:
-#   data:
-#     couchbase:
-#       bucket-name: StudentDetails
-#   couchbase:
-#     username: Administrator
-#     password: password
-#     connection-string: 127.0.0.1
+spring:
+  data:
+    couchbase:
+      bucket-name: StudentDetails
+  couchbase:
+    username: Administrator
+    password: password
+    connection-string: 127.0.0.1
