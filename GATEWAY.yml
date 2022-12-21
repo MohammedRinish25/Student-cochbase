@@ -8,6 +8,6 @@ spring:
     gateway:
       routes:
       - id: watermarkService
-        uri:  lb://WATERMARK-SERVICE
+        uri:  lb://STUDENT-SERVICE
         predicates:
         - Path=/** 
