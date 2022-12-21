@@ -7,7 +7,7 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: watermarkService
+      - id: studentService
         uri:  lb://STUDENT-SERVICE
         predicates:
         - Path=/** 
