@@ -1,3 +1,10 @@
+eureka:
+  client:
+    service-url:
+      default-zone: http://EUREKA-SERVER
+
+
+
 spring:
   data:
     couchbase:
