@@ -1,1 +1,16 @@
 
+eureka:
+  client:
+    service-url:
+      default-zone: http://EUREKA-SERVER
+
+
+
+spring:
+  data:
+    couchbase:
+      bucket-name: StudentDetails
+  couchbase:
+    username: Administrator
+    password: password
+    connection-string: 127.0.0.1
