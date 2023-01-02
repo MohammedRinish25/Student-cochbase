@@ -7,7 +7,14 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: studentService
+      - id: studentService-get
         uri:  lb://STUDENT
         predicates:
-        - Path=/** 
+        - Path=/students-api-get/** 
+        
+       - id: studentService-post
+        uri:  lb://STUDENT-POST
+        predicates:
+        - Path=/students-api-post/** 
+        
+       
