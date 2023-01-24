@@ -3,9 +3,19 @@ eureka:
     service-url:
       default-zone: http://EUREKA-SERVER
       
-spring:   
+spring:
   cloud:
     gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+              allowedOrigins: "*"
+              allowedMethods: "*"
+              allowedHeaders: "*"
+      
+    
       routes:
       - id: student
         uri:  lb://STUDENT
@@ -18,3 +28,5 @@ spring:
         - Path=/students-api-post/** 
         
        
+
+
